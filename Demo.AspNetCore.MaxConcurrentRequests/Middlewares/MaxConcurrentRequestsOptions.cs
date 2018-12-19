@@ -18,10 +18,14 @@
         private int _limit;
         private int _maxQueueLength;
         private int _maxTimeInQueue;
-        #endregion
+		#endregion
 
-        #region Properties
-        public int Limit
+		#region Properties
+		public bool Enabled { get; set; } = true;
+
+		public string[] ExcludePaths { get; set; }
+
+		public int Limit
         {
             get { return _limit; }
 

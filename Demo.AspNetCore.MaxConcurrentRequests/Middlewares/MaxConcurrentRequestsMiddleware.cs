@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Options;
 using Demo.AspNetCore.MaxConcurrentRequests.Middlewares.Internals;
+using System.Linq;
 
 namespace Demo.AspNetCore.MaxConcurrentRequests.Middlewares
 {
@@ -36,7 +37,13 @@ namespace Demo.AspNetCore.MaxConcurrentRequests.Middlewares
         #region Methods
         public async Task Invoke(HttpContext context)
         {
-            if (CheckLimitExceeded() && !(await TryWaitInQueueAsync(context.RequestAborted)))
+			if (_options.ExcludePaths.Any(path => context.Request.Path.Value.StartsWith(path)))
+			{
+				await _next(context);
+				return;
+			}
+
+			if (_options.Enabled && CheckLimitExceeded() && !(await TryWaitInQueueAsync(context.RequestAborted)))
             {
                 if (!context.RequestAborted.IsCancellationRequested)
                 {
