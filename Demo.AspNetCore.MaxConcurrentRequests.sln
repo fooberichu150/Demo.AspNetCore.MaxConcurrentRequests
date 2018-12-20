@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.AspNetCore.MaxConcurre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.AspNetCore.MaxConcurrentRequests", "Test.AspNetCore.MaxConcurrentRequests\Test.AspNetCore.MaxConcurrentRequests.csproj", "{FE0B37F9-76CD-4E29-A50C-339EF33E6535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxConcurrentRequests.Core", "MaxConcurrentRequests.Core\MaxConcurrentRequests.Core.csproj", "{F257B723-317E-48FD-B6A8-94516E26B059}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TomaszDemo", "TomaszDemo", "{1EBCEEFE-754A-4B50-B728-EB84F01B83BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxConcurrentRequests.Demo", "MaxConcurrentRequests.Demo\MaxConcurrentRequests.Demo.csproj", "{A2A271D5-1F3E-4114-9066-B5121D1D9339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,23 @@ Global
 		{FE0B37F9-76CD-4E29-A50C-339EF33E6535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE0B37F9-76CD-4E29-A50C-339EF33E6535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE0B37F9-76CD-4E29-A50C-339EF33E6535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F257B723-317E-48FD-B6A8-94516E26B059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F257B723-317E-48FD-B6A8-94516E26B059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F257B723-317E-48FD-B6A8-94516E26B059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F257B723-317E-48FD-B6A8-94516E26B059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A271D5-1F3E-4114-9066-B5121D1D9339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A271D5-1F3E-4114-9066-B5121D1D9339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A271D5-1F3E-4114-9066-B5121D1D9339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A271D5-1F3E-4114-9066-B5121D1D9339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F03D5AAC-4C02-45FA-BD0A-4E4299B3E764} = {1EBCEEFE-754A-4B50-B728-EB84F01B83BD}
+		{FE0B37F9-76CD-4E29-A50C-339EF33E6535} = {1EBCEEFE-754A-4B50-B728-EB84F01B83BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {604A5242-103F-48EA-A282-9F41C86E36DD}
 	EndGlobalSection
 EndGlobal
